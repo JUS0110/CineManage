@@ -40,4 +40,7 @@ build/
 
 echo ".idea/" >> .gitignore
 
+.idea
 .mvn
+pom.xml
+imagem.png
