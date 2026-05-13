@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04aa6610-8b67-41d3-91cf-27505aa413d7" name="Changes" comment="teste">
-      <change beforePath="$PROJECT_DIR$/../cinemamanager" beforeDir="false" />
-    </list>
+    <list default="true" id="04aa6610-8b67-41d3-91cf-27505aa413d7" name="Changes" comment="teste" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,12 +26,12 @@
     &quot;assignee&quot;: &quot;gabrielmaksimus-ui&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/gabrielmaksimus-ui/CineManage.git",
-    "accountId": "bb5d1ce1-6b94-4fa5-9381-a39d19b9c696"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gabrielmaksimus-ui/CineManage.git&quot;,
+    &quot;accountId&quot;: &quot;bb5d1ce1-6b94-4fa5-9381-a39d19b9c696&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -59,7 +57,7 @@
     "git-widget-placeholder": "#1 on salas",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/gowkh/Documents/git-e-github/maks/CineManage",
+    "last_opened_file_path": "C:/Users/gowkh/Documents/git-e-github/maks/cinemanager",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -135,6 +133,7 @@
       <workItem from="1778368522724" duration="1000" />
       <workItem from="1778369382579" duration="626000" />
       <workItem from="1778687287984" duration="57000" />
+      <workItem from="1778687445389" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary=".mvn remove">
       <option name="closed" value="true" />
