@@ -1,16 +1,20 @@
-package br.ufrpe.cine_rural;
-import br.ufrpe.cine_rural.dados.implemento.RepositorioClienteImpl;
-import br.ufrpe.cine_rural.dados.interfaces.RepositorioCliente;
-import br.ufrpe.cine_rural.negocio.loja.Produto;
-import br.ufrpe.cine_rural.negocio.loja.VendaLojinha;
-import br.ufrpe.cine_rural.negocio.beans.Cliente;
-import br.ufrpe.cine_rural.negocio.beans.Filme;
-import br.ufrpe.cine_rural.negocio.beans.tipoSala.Comum;
-import br.ufrpe.cine_rural.negocio.beans.tipoSala.Imax;
-import br.ufrpe.cine_rural.negocio.beans.tipoSala.Sala;
-import br.ufrpe.cine_rural.negocio.beans.tipoSala.Vip;
-import br.ufrpe.cine_rural.negocio.beans.Ingresso;
-import br.ufrpe.cine_rural.negocio.beans.Sessao;
+package main.java.br.ufrpe.cine_rural;
+
+import main.java.br.ufrpe.cine_rural.enums.*;
+
+import main.java.br.ufrpe.cine_rural.model.beans.loja.Produto;
+import main.java.br.ufrpe.cine_rural.model.beans.loja.VendaLojinha;
+
+import main.java.br.ufrpe.cine_rural.model.beans.Assento;
+import main.java.br.ufrpe.cine_rural.model.beans.Cliente;
+import main.java.br.ufrpe.cine_rural.model.beans.Filme;
+import main.java.br.ufrpe.cine_rural.model.beans.Ingresso;
+import main.java.br.ufrpe.cine_rural.model.beans.Sessao;
+
+import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Comum;
+import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Imax;
+import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Sala;
+import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Vip;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -19,147 +23,288 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Criando produtos
+        // =========================
+        // PRODUTOS
+        // =========================
+
         Produto p1 = new Produto(1, "Pipoca", 10.00, 50);
         Produto p2 = new Produto(2, "Refrigerante", 7.50, 30);
-        Produto p3 = new Produto(3, "Chocolate", 5.00, 0); // sem estoque
+        Produto p3 = new Produto(3, "Chocolate", 5.00, 0);
 
-        // Criando uma venda
+        // =========================
+        // VENDA LOJINHA
+        // =========================
+
         VendaLojinha venda = new VendaLojinha();
 
-        // Teste 1: Adicionar itens normais
-        System.out.println("=== Adicionando itens ===");
-        venda.adicionarItem(p1, 2); // 2 pipocas
-        venda.adicionarItem(p2, 3); // 3 refrigerantes
+        System.out.println("=== ADICIONANDO ITENS ===");
 
-        // Teste 2: Tentar adicionar produto sem estoque
-        System.out.println("\n=== Testando estoque vazio ===");
+        venda.adicionarItem(p1, 2);
+        venda.adicionarItem(p2, 3);
+
+        // =========================
+        // TESTE ESTOQUE
+        // =========================
+
+        System.out.println("\n=== TESTANDO ESTOQUE ===");
+
         try {
+
             venda.adicionarItem(p3, 1);
+
         } catch (RuntimeException e) {
-            System.out.println("Erro esperado: " + e.getMessage());
+
+            System.out.println(
+                    "Erro esperado: "
+                            + e.getMessage()
+            );
         }
 
-        // Teste 3: Remover quantidade parcial
-        System.out.println("\n=== Removendo 1 refrigerante ===");
-        venda.removerItem(p2, 1); // remove 1 dos 3
+        // =========================
+        // REMOVENDO ITEM
+        // =========================
 
-        // Teste 4: Remover item completamente
-        System.out.println("\n=== Removendo todas as pipocas ===");
-        venda.removerItem(p1, 10); // quantidade maior que o adicionado → remove tudo
+        System.out.println("\n=== REMOVENDO REFRIGERANTE ===");
 
-        // Teste 5: Tentar remover produto que não está na venda
-        System.out.println("\n=== Removendo produto não adicionado ===");
-        venda.removerItem(p3, 1);
+        venda.removerItem(p2, 1);
 
-        // Teste 6: Finalizar venda
-        System.out.println("\n=== Finalizando venda ===");
+        System.out.println("\n=== REMOVENDO PIPOCA ===");
+
+        venda.removerItem(p1, 10);
+
+        // =========================
+        // FINALIZANDO VENDA
+        // =========================
+
+        System.out.println("\n=== FINALIZANDO VENDA ===");
+
         venda.finalizarVenda();
 
-        //Criando Salas
+        // =========================
+        // SALAS
+        // =========================
+
         Comum salaComum = new Comum(1, 100);
         Imax salaImax = new Imax(2, 50);
         Vip salaVip = new Vip(3, 20);
 
-        //Criando Filme (teste 1)
-        Filme filmeAcao = new Filme("Vingadores",
+        // =========================
+        // FILMES
+        // =========================
+
+        Filme filmeAcao = new Filme(
+                "Vingadores",
                 "Herois que salvam o mundo",
-                "Acao",
-                12,
-                LocalTime.of(2,30)
+                Genero.ACAO,
+                ClassificacaoIndicativa.DOZE,
+                LocalTime.of(2, 30)
         );
-        //Criando Filme (teste 2)
+
         Filme filmeDrama = new Filme(
-                "O Poderoso Chefão",
-                "Família mafiosa italiana",
-                "Drama",
-                16,
+                "O Poderoso Chefao",
+                "Familia mafiosa italiana",
+                Genero.DRAMA,
+                ClassificacaoIndicativa.DEZESSEIS,
                 LocalTime.of(2, 55)
         );
 
-        //Criando Clientes (teste)
+        // =========================
+        // CLIENTES
+        // =========================
 
-        Cliente clienteAdulto = new Cliente("Gededias God", "123.456.789-00", 69);
-        Cliente clienteMenor = new Cliente ("Gededias God Jr.", "987-654-321-00", 14);
+        Cliente clienteAdulto = new Cliente(
+                "Gededias God",
+                "123.456.789-00",
+                69
+        );
 
-        //Criando Sessões (teste)
+        Cliente clienteMenor = new Cliente(
+                "Gededias God Jr.",
+                "987-654-321-00",
+                14
+        );
 
-        Sessao sessaoAcao = new Sessao("Dublado",
-                "Disponível",
+        // SESSOES
+
+        Sessao sessaoAcao = new Sessao(
+                Idioma.DUBLADO,
+                StatusSessao.ABERTA,
                 LocalDateTime.now(),
                 filmeAcao,
-                salaComum);
-        Sessao sessaoDrama = new Sessao("Legendado",
-                "Disponível",
+                salaComum
+        );
+
+        Sessao sessaoDrama = new Sessao(
+                Idioma.LEGENDADO,
+                StatusSessao.ABERTA,
                 LocalDateTime.now().plusHours(3),
                 filmeDrama,
-                salaImax);
+                salaImax
+        );
 
-        // Criando Ingressos (teste)
+        // INGRESSOS
+
         System.out.println("\n=== SISTEMA DO CINEMA ===");
 
-        // Ingresso Adulto
-        Ingresso ingresso1 = new Ingresso("A1", false, false, 50.0, clienteAdulto, sessaoAcao);
+        Assento assento1 = new Assento("A1");
+
+        Ingresso ingresso1 = new Ingresso(
+                sessaoAcao,
+                assento1,
+                50.0,
+                CategoriaMeiaEntrada.INTEIRA
+        );
+
+        ingresso1.setCliente(clienteAdulto);
+
         sessaoAcao.adicionarIngressos(ingresso1);
 
-        System.out.println("Ingresso criado: " + clienteAdulto.getNome() +
-                " - Assento: " + ingresso1.getAssento() +
-                " - Preço: R$" + ingresso1.getPreco());
+        System.out.println(
+                "Ingresso criado: "
+                        + clienteAdulto.getNome()
+                        + " - Assento: "
+                        + ingresso1.getAssento().getCodigo()
+                        + " - Preco: R$"
+                        + ingresso1.getPreco()
+        );
 
-        // Testar verificação de idade
-        System.out.println("Gededias-Pai pode assistir? " + ingresso1.VerificarIdade(sessaoAcao, clienteAdulto, false));
+        // VERIFICACAO IDADE
 
-        // Ingresso meia-entrada para menor com acompanhante (Caso Especial)
-        Ingresso ingresso2 = new Ingresso("A2", true, true, 25.0, clienteMenor, sessaoAcao);
-        ingresso2.setPreco(25.0, sessaoAcao, true); // Testando meia entrada
+        System.out.println(
+                "Gededias-Pai pode assistir? "
+                        + clienteAdulto.podeAssistir(
+                        sessaoAcao.getFilme(),
+                        false
+                )
+        );
+
+        // MEIA ENTRADA TESTE
+
+        Assento assento2 = new Assento("A2");
+
+        Ingresso ingresso2 = new Ingresso(
+                sessaoAcao,
+                assento2,
+                50.0,
+                CategoriaMeiaEntrada.ESTUDANTE
+        );
+
+        ingresso2.setCliente(clienteMenor);
+
         sessaoAcao.adicionarIngressos(ingresso2);
 
-        System.out.println("Junior (meia) pode assistir com acompanhante? " +
-                ingresso2.VerificarIdade(sessaoAcao, clienteMenor, true));
+        System.out.println(
+                "Junior pode assistir com acompanhante? "
+                        + clienteMenor.podeAssistir(
+                        sessaoAcao.getFilme(),
+                        true
+                )
+        );
 
-        // Listar ingressos da sessão
-        System.out.println("\n=== INGRESSOS DA SESSÃO ===");
+        // LISTAR INGRESSOS
+
+        System.out.println("\n=== INGRESSOS DA SESSAO ===");
+
         for (Ingresso i : sessaoAcao.getIngressos()) {
-            System.out.println("- " + i.getCliente().getNome() +
-                    " | " + i.getAssento() +
-                    " | R$" + i.getPreco() +
-                    " | Meia: " + i.getMeiaEntrada());
+
+            System.out.println(
+                    "- "
+                            + i.getCliente().getNome()
+                            + " | "
+                            + i.getAssento().getCodigo()
+                            + " | R$"
+                            + i.getPreco()
+                            + " | Categoria: "
+                            + i.getCategoria()
+            );
         }
 
-        // Informações da sessão
-        System.out.println("\n=== INFORMAÇÕES DA SESSÃO ===");
-        System.out.println("Filme: " + sessaoAcao.getFilme().getTitulo());
-        System.out.println("Sala: " + sessaoAcao.getSala().getId() +
-                " (Preço base: R$" + sessaoAcao.getSala().getPreco() + ")");
-        System.out.println("Total ingressos: " + sessaoAcao.getTotalIngressos());
+        // INFORMACOES DA SESSAO
 
-        // Exibindo informações das salas
+        System.out.println("\n=== INFORMACOES DA SESSAO ===");
+
+        System.out.println(
+                "Filme: "
+                        + sessaoAcao.getFilme().getTitulo()
+        );
+
+        System.out.println(
+                "Genero: "
+                        + sessaoAcao.getFilme().getGenero()
+        );
+
+        System.out.println(
+                "Classificacao: "
+                        + sessaoAcao.getFilme().getClassificacao()
+        );
+
+        System.out.println(
+                "Idioma: "
+                        + sessaoAcao.getIdioma()
+        );
+
+        System.out.println(
+                "Status: "
+                        + sessaoAcao.getStatus()
+        );
+
+        System.out.println(
+                "Sala: "
+                        + sessaoAcao.getSala().getId()
+                        + " (Preco base: R$"
+                        + sessaoAcao.getSala().getPreco()
+                        + ")"
+        );
+
+        System.out.println(
+                "Total ingressos: "
+                        + sessaoAcao.getTotalIngressos()
+        );
+
+        // SALAS
+
         System.out.println("\n=== SALAS DO CINEMA ===");
+
         exibirSala(salaComum);
         exibirSala(salaImax);
         exibirSala(salaVip);
 
-        // Impressão de Salas teste usando Polimorfismo
-        Sala[] salas = {salaComum, salaImax, salaVip};
+        // POLIMORFISMO
+
+        Sala[] salas = {
+                salaComum,
+                salaImax,
+                salaVip
+        };
+
         System.out.println("\n=== LISTA DE SALAS ===");
+
         for (Sala sala : salas) {
-            System.out.println("Sala ID: " + sala.getId()
-                    + " | Capacidade: " + sala.getCapacidade()
-                    + " | Preço: R$" + sala.getPreco());
+
+            System.out.println(
+                    "Sala ID: "
+                            + sala.getId()
+                            + " | Capacidade: "
+                            + sala.getCapacidade()
+                            + " | Preco: R$"
+                            + sala.getPreco()
+            );
+        }
     }
-}
-    // Método para exibirSalas
+
+    // EXIBIR SALAS
+
     public static void exibirSala(Sala sala) {
-        System.out.println("Tipo: " + sala.getClass().getSimpleName()
-                + " | ID: " + sala.getId()
-                + " | Capacidade: " + sala.getCapacidade()
-                + " | Preço: R$" + sala.getPreco());
+
+        System.out.println(
+                "Tipo: "
+                        + sala.getClass().getSimpleName()
+                        + " | ID: "
+                        + sala.getId()
+                        + " | Capacidade: "
+                        + sala.getCapacidade()
+                        + " | Preco: R$"
+                        + sala.getPreco()
+        );
     }
 }
-
-
-
-
-
-
-

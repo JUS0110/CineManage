@@ -1,7 +1,7 @@
-package br.ufrpe.cine_rural.dados.implemento;
+package main.java.br.ufrpe.cine_rural.dados.implemento;
 
-import br.ufrpe.cine_rural.dados.interfaces.RepositorioSessao;
-import br.ufrpe.cine_rural.negocio.beans.Sessao;
+import main.java.br.ufrpe.cine_rural.dados.interfaces.RepositorioSessao;
+import main.java.br.ufrpe.cine_rural.model.beans.Sessao;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
