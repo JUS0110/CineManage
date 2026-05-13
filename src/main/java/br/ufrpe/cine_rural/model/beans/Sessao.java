@@ -31,8 +31,6 @@ public class Sessao {
         this.horario = horario;
         this.filme = filme;
         this.sala = sala;
-
-        // IMPORTANTE
         this.ingressos = new ArrayList<>();
     }
 

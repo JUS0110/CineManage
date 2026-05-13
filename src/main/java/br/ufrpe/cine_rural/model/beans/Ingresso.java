@@ -41,10 +41,6 @@ public class Ingresso {
         return valor;
     }
 
-    // =========================
-    // GETTERS
-    // =========================
-
     public Sessao getSessao() {
         return sessao;
     }
@@ -64,10 +60,6 @@ public class Ingresso {
     public Cliente getCliente() {
         return cliente;
     }
-
-    // =========================
-    // SETTERS
-    // =========================
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;

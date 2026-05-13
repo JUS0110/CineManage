@@ -23,17 +23,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // =========================
         // PRODUTOS
-        // =========================
 
         Produto p1 = new Produto(1, "Pipoca", 10.00, 50);
         Produto p2 = new Produto(2, "Refrigerante", 7.50, 30);
         Produto p3 = new Produto(3, "Chocolate", 5.00, 0);
 
-        // =========================
         // VENDA LOJINHA
-        // =========================
 
         VendaLojinha venda = new VendaLojinha();
 
@@ -42,9 +38,7 @@ public class Main {
         venda.adicionarItem(p1, 2);
         venda.adicionarItem(p2, 3);
 
-        // =========================
         // TESTE ESTOQUE
-        // =========================
 
         System.out.println("\n=== TESTANDO ESTOQUE ===");
 
@@ -60,9 +54,7 @@ public class Main {
             );
         }
 
-        // =========================
         // REMOVENDO ITEM
-        // =========================
 
         System.out.println("\n=== REMOVENDO REFRIGERANTE ===");
 
@@ -72,25 +64,19 @@ public class Main {
 
         venda.removerItem(p1, 10);
 
-        // =========================
         // FINALIZANDO VENDA
-        // =========================
 
         System.out.println("\n=== FINALIZANDO VENDA ===");
 
         venda.finalizarVenda();
 
-        // =========================
         // SALAS
-        // =========================
 
         Comum salaComum = new Comum(1, 100);
         Imax salaImax = new Imax(2, 50);
         Vip salaVip = new Vip(3, 20);
 
-        // =========================
         // FILMES
-        // =========================
 
         Filme filmeAcao = new Filme(
                 "Vingadores",
@@ -108,9 +94,7 @@ public class Main {
                 LocalTime.of(2, 55)
         );
 
-        // =========================
         // CLIENTES
-        // =========================
 
         Cliente clienteAdulto = new Cliente(
                 "Gededias God",
