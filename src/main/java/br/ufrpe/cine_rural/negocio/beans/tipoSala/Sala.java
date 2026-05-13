@@ -1,6 +1,6 @@
 package br.ufrpe.cine_rural.negocio.beans.tipoSala;
 
-public class Sala {
+abstract class Sala {
     protected int id;
     protected int capacidade;
     protected double preco;

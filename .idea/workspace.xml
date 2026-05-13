@@ -4,55 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04aa6610-8b67-41d3-91cf-27505aa413d7" name="Changes" comment="imagem pro readmee">
+    <list default="true" id="04aa6610-8b67-41d3-91cf-27505aa413d7" name="Changes" comment="teste">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/imagem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/UML.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/loja/ItemVenda.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/loja/Produto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/loja/VendaLojinha.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/Filme.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/HerancaSala/Comum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/HerancaSala/Imax.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/HerancaSala/Sala.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/HerancaSala/Vip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/Ingresso.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CinemaRural/src/main/java/br/ufrpe/cine_rural/monitor/Sessao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitHelp.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagem.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/UML.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/implemento/RepositorioClienteImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/implemento/RepositorioProdutoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/implemento/RepositorioSessaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/implemento/RepositorioVendaLojinhaImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/interfaces/RepositorioCliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/interfaces/RepositorioProduto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/interfaces/RepositorioSessao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/dados/interfaces/RepositorioVendaLojinha.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/Filme.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/Ingresso.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/Sessao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/tipoSala/Comum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/tipoSala/Imax.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/tipoSala/Sala.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/beans/tipoSala/Vip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/loja/ItemVenda.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/loja/Produto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/br/ufrpe/cine_rural/negocio/loja/VendaLojinha.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrpe/cine_rural/negocio/beans/tipoSala/Vip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrpe/cine_rural/negocio/beans/tipoSala/Vip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +31,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/gabrielmaksimus-ui/CineManage.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/gabrielmaksimus-ui/CineManage&quot;,
     &quot;accountId&quot;: &quot;bb5d1ce1-6b94-4fa5-9381-a39d19b9c696&quot;
   }
 }</component>
@@ -93,33 +47,33 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "salas",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/gowkh/Documents/git-e-github/maks",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;salas&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gowkh/Documents/git-e-github/maks&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\gowkh\Documents\git-e-github\maks" />
@@ -175,7 +129,12 @@
       <workItem from="1776697641060" duration="8000" />
       <workItem from="1778351489339" duration="8867000" />
       <workItem from="1778361131023" duration="478000" />
-      <workItem from="1778361708634" duration="1129000" />
+      <workItem from="1778361708634" duration="2135000" />
+      <workItem from="1778363992094" duration="249000" />
+      <workItem from="1778364898103" duration="628000" />
+      <workItem from="1778366414859" duration="1081000" />
+      <workItem from="1778368522724" duration="1000" />
+      <workItem from="1778369382579" duration="626000" />
     </task>
     <task id="LOCAL-00001" summary=".mvn remove">
       <option name="closed" value="true" />
@@ -209,7 +168,23 @@
       <option name="project" value="LOCAL" />
       <updated>1776173687617</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="teste">
+      <option name="closed" value="true" />
+      <created>1778362916318</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778362916318</updated>
+    </task>
+    <task id="LOCAL-00006" summary="teste">
+      <option name="closed" value="true" />
+      <created>1778364101691</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778364101691</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +206,8 @@
     <MESSAGE value="teste 3" />
     <MESSAGE value="teste 4" />
     <MESSAGE value="imagem pro readmee" />
-    <option name="LAST_COMMIT_MESSAGE" value="imagem pro readmee" />
+    <MESSAGE value="teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
