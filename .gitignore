@@ -42,3 +42,4 @@ echo ".idea/" >> .gitignore
 
 .idea/
 *.iml
+out/
