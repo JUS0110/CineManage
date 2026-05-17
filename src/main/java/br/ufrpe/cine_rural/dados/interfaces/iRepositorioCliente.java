@@ -3,7 +3,7 @@ package main.java.br.ufrpe.cine_rural.dados.interfaces;
 import main.java.br.ufrpe.cine_rural.model.beans.Cliente;
 import java.util.ArrayList;
 
-public interface RepositorioCliente {
+public interface iRepositorioCliente {
 
     void cadastrar(Cliente cliente);
 

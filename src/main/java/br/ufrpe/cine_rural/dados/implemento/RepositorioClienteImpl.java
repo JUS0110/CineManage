@@ -1,11 +1,11 @@
 package main.java.br.ufrpe.cine_rural.dados.implemento;
 
-import main.java.br.ufrpe.cine_rural.dados.interfaces.RepositorioCliente;
+import main.java.br.ufrpe.cine_rural.dados.interfaces.iRepositorioCliente;
 import main.java.br.ufrpe.cine_rural.model.beans.Cliente;
 import java.util.ArrayList;
 
 
-public class RepositorioClienteImpl implements RepositorioCliente {
+public class RepositorioClienteImpl implements iRepositorioCliente {
 
     private ArrayList<Cliente> clientes;
 
