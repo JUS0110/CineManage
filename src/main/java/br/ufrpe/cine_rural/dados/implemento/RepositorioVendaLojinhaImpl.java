@@ -1,7 +1,7 @@
-package main.java.br.ufrpe.cine_rural.dados.implemento;
+package br.ufrpe.cine_rural.dados.implemento;
 
-import main.java.br.ufrpe.cine_rural.dados.interfaces.iRepositorioVendaLojinha;
-import main.java.br.ufrpe.cine_rural.model.beans.loja.VendaLojinha;
+import br.ufrpe.cine_rural.dados.interfaces.iRepositorioVendaLojinha;
+import br.ufrpe.cine_rural.model.loja.VendaLojinha;
 import java.util.ArrayList;
 
 

@@ -1,7 +1,7 @@
-package main.java.br.ufrpe.cine_rural.model.beans;
+package br.ufrpe.cine_rural.model;
 
-import main.java.br.ufrpe.cine_rural.enums.ClassificacaoIndicativa;
-import main.java.br.ufrpe.cine_rural.enums.Genero;
+import br.ufrpe.cine_rural.enums.ClassificacaoIndicativa;
+import br.ufrpe.cine_rural.enums.Genero;
 
 import java.time.LocalTime;
 

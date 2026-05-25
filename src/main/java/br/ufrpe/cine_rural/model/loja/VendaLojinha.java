@@ -1,4 +1,4 @@
-package main.java.br.ufrpe.cine_rural.model.beans.loja;
+package br.ufrpe.cine_rural.model.loja;
 
 import java.util.ArrayList;
 import java.util.List;

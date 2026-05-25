@@ -1,6 +1,6 @@
-package main.java.br.ufrpe.cine_rural.model.beans;
+package br.ufrpe.cine_rural.model;
 
-import main.java.br.ufrpe.cine_rural.enums.TipoAssento;
+import br.ufrpe.cine_rural.enums.TipoAssento;
 
 public class Assento {
     private String codigo;

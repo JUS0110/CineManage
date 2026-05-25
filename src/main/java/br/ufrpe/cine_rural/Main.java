@@ -1,20 +1,20 @@
-package main.java.br.ufrpe.cine_rural;
+package br.ufrpe.cine_rural;
 
-import main.java.br.ufrpe.cine_rural.enums.*;
+import br.ufrpe.cine_rural.enums.*;
 
-import main.java.br.ufrpe.cine_rural.model.beans.loja.Produto;
-import main.java.br.ufrpe.cine_rural.model.beans.loja.VendaLojinha;
+import br.ufrpe.cine_rural.model.loja.Produto;
+import br.ufrpe.cine_rural.model.loja.VendaLojinha;
 
-import main.java.br.ufrpe.cine_rural.model.beans.Assento;
-import main.java.br.ufrpe.cine_rural.model.beans.Cliente;
-import main.java.br.ufrpe.cine_rural.model.beans.Filme;
-import main.java.br.ufrpe.cine_rural.model.beans.Ingresso;
-import main.java.br.ufrpe.cine_rural.model.beans.Sessao;
+import br.ufrpe.cine_rural.model.Assento;
+import br.ufrpe.cine_rural.model.Cliente;
+import br.ufrpe.cine_rural.model.Filme;
+import br.ufrpe.cine_rural.model.Ingresso;
+import br.ufrpe.cine_rural.model.Sessao;
 
-import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Comum;
-import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Imax;
-import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Sala;
-import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Vip;
+import br.ufrpe.cine_rural.model.tiposala.Comum;
+import br.ufrpe.cine_rural.model.tiposala.Imax;
+import br.ufrpe.cine_rural.model.tiposala.Sala;
+import br.ufrpe.cine_rural.model.tiposala.Vip;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -99,13 +99,15 @@ public class Main {
         Cliente clienteAdulto = new Cliente(
                 "Gededias God",
                 "123.456.789-00",
-                69
+                69,
+                "gededias69@gmail.com"
         );
 
         Cliente clienteMenor = new Cliente(
                 "Gededias God Jr.",
                 "987-654-321-00",
-                14
+                14,
+                "junior@gmail.com"
         );
 
         // SESSOES

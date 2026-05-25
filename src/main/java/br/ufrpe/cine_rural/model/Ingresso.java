@@ -1,7 +1,7 @@
-package main.java.br.ufrpe.cine_rural.model.beans;
+package br.ufrpe.cine_rural.model;
 
-import main.java.br.ufrpe.cine_rural.enums.CategoriaMeiaEntrada;
-import main.java.br.ufrpe.cine_rural.enums.TipoAssento;
+import br.ufrpe.cine_rural.enums.CategoriaMeiaEntrada;
+import br.ufrpe.cine_rural.enums.TipoAssento;
 
 public class Ingresso {
 

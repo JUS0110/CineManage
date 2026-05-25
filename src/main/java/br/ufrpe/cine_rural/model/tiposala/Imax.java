@@ -1,4 +1,4 @@
-package main.java.br.ufrpe.cine_rural.model.beans.tiposala;
+package br.ufrpe.cine_rural.model.tiposala;
 
 public class Imax extends Sala{
 

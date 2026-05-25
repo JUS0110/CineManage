@@ -1,7 +1,7 @@
-package main.java.br.ufrpe.cine_rural.dados.implemento;
+package br.ufrpe.cine_rural.dados.implemento;
 
-import main.java.br.ufrpe.cine_rural.dados.interfaces.iRepositorioCliente;
-import main.java.br.ufrpe.cine_rural.model.beans.Cliente;
+import br.ufrpe.cine_rural.dados.interfaces.iRepositorioCliente;
+import br.ufrpe.cine_rural.model.Cliente;
 import java.util.ArrayList;
 
 

@@ -1,9 +1,9 @@
-package main.java.br.ufrpe.cine_rural.model.beans;
+package br.ufrpe.cine_rural.model;
 
-import main.java.br.ufrpe.cine_rural.enums.Idioma;
-import main.java.br.ufrpe.cine_rural.enums.StatusSessao;
+import br.ufrpe.cine_rural.enums.Idioma;
+import br.ufrpe.cine_rural.enums.StatusSessao;
 
-import main.java.br.ufrpe.cine_rural.model.beans.tiposala.Sala;
+import br.ufrpe.cine_rural.model.tiposala.Sala;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

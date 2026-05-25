@@ -1,6 +1,6 @@
-package main.java.br.ufrpe.cine_rural.dados.interfaces;
+package br.ufrpe.cine_rural.dados.interfaces;
 
-import main.java.br.ufrpe.cine_rural.model.beans.Cliente;
+import br.ufrpe.cine_rural.model.Cliente;
 import java.util.ArrayList;
 
 public interface iRepositorioCliente {

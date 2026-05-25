@@ -1,4 +1,4 @@
-package main.java.br.ufrpe.cine_rural.model.beans;
+package br.ufrpe.cine_rural.model;
 
 public class Cliente {
     private String nome;
