@@ -1,8 +1,8 @@
-package br.ufrpe.cine_rural.controllers;
+package main.java.br.ufrpe.cine_rural.controllers;
 
-import br.ufrpe.cine_rural.dados.implemento.RepositorioClienteImpl;
-import br.ufrpe.cine_rural.model.Cliente;
-import br.ufrpe.cine_rural.model.Ingresso;
+import main.java.br.ufrpe.cine_rural.dados.implemento.RepositorioClienteImpl;
+import main.java.br.ufrpe.cine_rural.model.beans.Cliente;
+import main.java.br.ufrpe.cine_rural.model.beans.Ingresso;
 
 import java.util.ArrayList;
 
@@ -35,7 +35,7 @@ public class ClienteController {
     public void atualizarCliente(Cliente cliente, String novoNome, int novaIdade, String novoEmail) {
         if (novoNome != null && !novoNome.isBlank()) cliente.setNome(novoNome);
         if (novaIdade >= 0) cliente.setIdade(novaIdade);
-        if (novoEmail != null && !novoEmail.isBlank()) cliente.setEmail(novoEmail);
+        if (novoNome != null && !novoNome.isBlank()) cliente.setEmail(novoEmail);
         repositorio.atualizar(cliente);
         System.out.println("[ClienteController] Dados atualizados para: " + cliente.getNome());
     }
@@ -70,5 +70,5 @@ public class ClienteController {
     public void removerCliente(String cpf) {
         repositorio.remover(cpf);
         System.out.println("[ClienteController] Cliente com CPF " + cpf + " removido.");
-    }
+    }  
 }
