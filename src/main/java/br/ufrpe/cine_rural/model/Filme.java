@@ -13,9 +13,11 @@ public class Filme {
     private int duracao;
     private Genero genero;
     private ClassificacaoIndicativa classificacao;
+    private LocalTime localTime;
 
     public Filme(String titulo,
                  String sinopse,
+                 int duracao,
                  Genero genero,
                  ClassificacaoIndicativa classificacao,
                  LocalTime localTime) {
@@ -25,7 +27,9 @@ public class Filme {
         this.sinopse = sinopse;
         this.duracao = duracao;
         this.classificacao = classificacao;
-    }
+        this.localTime = localTime;
+    } // arrumei o construtor do Filme, faltou adicionar o localTime e a duração corretamente no construtor para rodar na main
+
 
     public String getTitulo() {
         return titulo;

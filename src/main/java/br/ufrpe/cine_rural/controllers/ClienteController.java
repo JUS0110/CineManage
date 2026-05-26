@@ -35,7 +35,7 @@ public class ClienteController {
     public void atualizarCliente(Cliente cliente, String novoNome, int novaIdade, String novoEmail) {
         if (novoNome != null && !novoNome.isBlank()) cliente.setNome(novoNome);
         if (novaIdade >= 0) cliente.setIdade(novaIdade);
-        if (novoNome != null && !novoNome.isBlank()) cliente.setEmail(novoEmail);
+        if (novoEmail != null && !novoEmail.isBlank()) cliente.setEmail(novoEmail);
         repositorio.atualizar(cliente);
         System.out.println("[ClienteController] Dados atualizados para: " + cliente.getNome());
     }

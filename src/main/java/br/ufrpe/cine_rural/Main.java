@@ -1,20 +1,13 @@
 package br.ufrpe.cine_rural;
 
+import br.ufrpe.cine_rural.controllers.ClienteController;
+import br.ufrpe.cine_rural.dados.implemento.*;
 import br.ufrpe.cine_rural.enums.*;
 
-import br.ufrpe.cine_rural.model.loja.Produto;
-import br.ufrpe.cine_rural.model.loja.VendaLojinha;
+import br.ufrpe.cine_rural.model.*;
+import br.ufrpe.cine_rural.model.loja.*;
+import br.ufrpe.cine_rural.model.tiposala.*;
 
-import br.ufrpe.cine_rural.model.Assento;
-import br.ufrpe.cine_rural.model.Cliente;
-import br.ufrpe.cine_rural.model.Filme;
-import br.ufrpe.cine_rural.model.Ingresso;
-import br.ufrpe.cine_rural.model.Sessao;
-
-import br.ufrpe.cine_rural.model.tiposala.Comum;
-import br.ufrpe.cine_rural.model.tiposala.Imax;
-import br.ufrpe.cine_rural.model.tiposala.Sala;
-import br.ufrpe.cine_rural.model.tiposala.Vip;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -81,6 +74,7 @@ public class Main {
         Filme filmeAcao = new Filme(
                 "Vingadores",
                 "Herois que salvam o mundo",
+                150,
                 Genero.ACAO,
                 ClassificacaoIndicativa.DOZE,
                 LocalTime.of(2, 30)
@@ -89,6 +83,7 @@ public class Main {
         Filme filmeDrama = new Filme(
                 "O Poderoso Chefao",
                 "Familia mafiosa italiana",
+                175,
                 Genero.DRAMA,
                 ClassificacaoIndicativa.DEZESSEIS,
                 LocalTime.of(2, 55)
@@ -293,4 +288,34 @@ public class Main {
                         + sala.getPreco()
         );
     }
+
+    RepositorioClienteImpl repositorioCliente = new RepositorioClienteImpl();
+    ClienteController cController = new ClienteController(repositorioCliente);
+    Imax salaImax = new Imax(1, 150);
+    Filme filme = new Filme(
+            "Interestelar",
+            "Um grupo de astronautas viaja através de um buraco de minhoca em busca de um novo lar para a humanidade.",
+            169,
+            Genero.FICCAO,
+            ClassificacaoIndicativa.DEZESSEIS,
+            LocalTime.of(19, 30)
+    );
+    Sessao sessao = new Sessao(
+            Idioma.DUBLADO,
+            StatusSessao.EM_EXIBICAO,
+            LocalDateTime.of(2026, 5, 22, 19, 30),
+            filme,
+            salaImax
+    );
+    Assento assento = new Assento("1");
+    Ingresso ingresso = new Ingresso(
+            sessao,
+            assento,
+            25.0,
+            CategoriaMeiaEntrada.ESTUDANTE
+    );
+        cController.cadastrarCliente("Arthur", "121", 23, "neve.com");
+        cController.atualizarCliente(cController.buscarPorCpf("121"), "Paulo", 21, "Paulo.com");
+        System.out.println(cController.listarClientes());
+
 }

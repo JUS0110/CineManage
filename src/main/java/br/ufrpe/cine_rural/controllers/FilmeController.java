@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.time.LocalTime;
 
 public class FilmeController {
     private final iRepositorioFilme repositorioFilme;
@@ -26,16 +27,30 @@ public class FilmeController {
     }
 
 
-    public void cadastrarFilme(String titulo, String sinopse, int duracao, Genero genero, ClassificacaoIndicativa classificacao) {
+    public void cadastrarFilme(String titulo,
+                               String sinopse,
+                               int duracao,
+                               Genero genero,
+                               ClassificacaoIndicativa classificacao,
+                               LocalTime localTime) {
 
         if (titulo == null || titulo.isBlank()) {
             throw new IllegalArgumentException("Título do filme não pode ser vazio.");
         }
+
         if (duracao <= 0) {
             throw new IllegalArgumentException("Duração deve ser positiva.");
         }
 
-        Filme filme = new Filme(titulo, sinopse, duracao, genero, classificacao);
+        Filme filme = new Filme(
+                titulo,
+                sinopse,
+                duracao,
+                genero,
+                classificacao,
+                localTime
+        );
+
         repositorioFilme.cadastrar(filme);
     }
 
