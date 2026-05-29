@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/22"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ufrpe.cinemaufrpe.FilmesController">
+
+   <content>
+      <VBox fx:id="containerFilmes" spacing="20"/>
+   </content>
+
+</ScrollPane>
