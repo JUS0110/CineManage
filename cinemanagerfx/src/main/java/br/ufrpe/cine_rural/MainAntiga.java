@@ -12,7 +12,7 @@ import br.ufrpe.cine_rural.model.tiposala.*;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class Main {
+public class MainAntiga {
 
     public static void main(String[] args) {
 
