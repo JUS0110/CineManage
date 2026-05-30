@@ -6,6 +6,7 @@ import br.ufrpe.cine_rural.enums.Genero;
 import br.ufrpe.cine_rural.model.Filme;
 import br.ufrpe.cine_rural.model.Sessao;
 import br.ufrpe.cine_rural.dados.interfaces.iRepositorioFilme;
+import javafx.scene.image.Image;
 
 
 import java.util.ArrayList;
@@ -32,7 +33,8 @@ public class FilmeController {
                                int duracao,
                                Genero genero,
                                ClassificacaoIndicativa classificacao,
-                               LocalTime localTime) {
+                               LocalTime localTime,
+                               Image poster) {
 
         if (titulo == null || titulo.isBlank()) {
             throw new IllegalArgumentException("Título do filme não pode ser vazio.");
@@ -48,7 +50,8 @@ public class FilmeController {
                 duracao,
                 genero,
                 classificacao,
-                localTime
+                localTime,
+                poster
         );
 
         repositorioFilme.cadastrar(filme);

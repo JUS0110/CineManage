@@ -10,6 +10,6 @@ module br.ufrpe.cine_rural {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens br.ufrpe.cine_rural to javafx.fxml;
-    exports br.ufrpe.cine_rural;
+    opens br.ufrpe.cine_rural.gui.controllers_telas to javafx.fxml;
+    exports br.ufrpe.cine_rural.gui;
 }

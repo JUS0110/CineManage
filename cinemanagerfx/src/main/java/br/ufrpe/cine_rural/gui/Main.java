@@ -10,32 +10,25 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        FXMLLoader loader =
-                new FXMLLoader(
-                        Main.class.getResource("tela.fxml")
-                );
 
-        Scene scene = new Scene(
-                loader.load()
+        FXMLLoader loader1 = new FXMLLoader(
+                Main.class.getResource("/br/ufrpe/cine_rural/gui/Assentos.fxml")
         );
 
-        stage.setTitle("Cinema Rural");
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
+        FXMLLoader loader2 = new FXMLLoader(
+                Main.class.getResource("/br/ufrpe/cine_rural/gui/Filmes.fxml")
+        );
 
-        FXMLLoader fxmlLoader =
-                new FXMLLoader(
-                        Main.class.getResource("Filmes.fxml")
-                );
+        Stage stage1 = new Stage();
+        stage1.setTitle("Assentos");
+        stage1.setScene(new Scene(loader1.load()));
 
-        Scene scene2 = new Scene(fxmlLoader.load());
-        scene.getStylesheets().add(getClass().getResource("Estilo.css").toExternalForm());
+        Stage stage2 = new Stage();
+        stage2.setTitle("Filmes");
+        stage2.setScene(new Scene(loader2.load()));
 
-        stage.setScene(scene2);
-        stage.show();
-        stage.setScene(scene2);
-        stage.show();
+        stage1.show();
+        stage2.show();
     }
 
     public static void main(String[] args) {

@@ -11,6 +11,11 @@ public class Sala {
 
     }
 
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() + " (Sala " + id + ")";
+    }
+
     public int getId() {
         return id;
     }

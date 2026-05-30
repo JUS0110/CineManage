@@ -6,7 +6,7 @@
 
 <ScrollPane xmlns="http://javafx.com/javafx/22"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.ufrpe.cinemaufrpe.FilmesController">
+            fx:controller="br.ufrpe.cine_rural.gui.controllers_telas.FilmesController">
 
    <content>
       <VBox fx:id="containerFilmes" spacing="20"/>

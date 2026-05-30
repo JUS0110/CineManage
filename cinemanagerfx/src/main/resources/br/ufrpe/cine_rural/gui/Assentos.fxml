@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="painel" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.cine_rural.controllers.TelaController">
+<AnchorPane fx:id="painel" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.cine_rural.gui.controllers_telas.AssentoController">
    <children>
       <SplitPane dividerPositions="0.8492201039861352" layoutX="11.0" layoutY="11.0" orientation="VERTICAL" prefHeight="579.0" prefWidth="668.0">
         <items>
