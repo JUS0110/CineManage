@@ -45,15 +45,40 @@ public class IngressoController {
 
         String listaAssentos = String.join(", ", assentosSelecionados);
 
-        String linhaQuantidade = qtdIngressos == 1
-                ? "Quantidade de ingressos: 1 ingresso"
-                : "Quantidade de ingressos: " + qtdIngressos + " ingressos";
+        String linhaQuantidade;
+        if (qtdIngressos == 1) {
+            linhaQuantidade = "Quantidade de ingressos: 1 ingresso";
+        } else {
+            linhaQuantidade = "Quantidade de ingressos: " + qtdIngressos + " ingressos";
+        }
 
-        String linhaAssentos = qtdIngressos == 1
-                ? "Assento selecionado: " + listaAssentos
-                : "Assentos selecionados: " + listaAssentos;
+        String linhaAssentos;
+        if (qtdIngressos == 1) {
+            linhaAssentos = "Assento selecionado: " + listaAssentos;
+        } else {
+            linhaAssentos = "Assentos selecionados: " + listaAssentos;
+        }
 
-        String horarioFormatado = horario != null ? horario : "—";
+        String textoFilme;
+        if (tituloFilme != null) {
+            textoFilme = tituloFilme;
+        } else {
+            textoFilme = "—";
+        }
+
+        String textoHorario;
+        if (horario != null) {
+            textoHorario = horario;
+        } else {
+            textoHorario = "—";
+        }
+
+        String textoSala;
+        if (tipoSala != null) {
+            textoSala = tipoSala;
+        } else {
+            textoSala = "—";
+        }
 
         String conteudo = String.format(
                 """
@@ -63,9 +88,9 @@ public class IngressoController {
                 %s
                 %s
                 """,
-                tituloFilme != null ? tituloFilme : "—",
-                horario     != null ? horario     : "—",
-                tipoSala    != null ? tipoSala    : "—",
+                textoFilme,
+                textoHorario,
+                textoSala,
                 linhaAssentos,
                 linhaQuantidade
         );
@@ -73,7 +98,7 @@ public class IngressoController {
         Alert alert = new Alert(Alert.AlertType.INFORMATION, conteudo, ButtonType.OK);
         alert.setTitle("Emissão de Ingresso");
         alert.setHeaderText("Resumo do(s) Ingresso(s)");
-        
+
         alert.getDialogPane().setMinHeight(javafx.scene.layout.Region.USE_PREF_SIZE);
 
         alert.showAndWait();
