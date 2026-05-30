@@ -1,0 +1,58 @@
+/* Fundo principal */
+.root-pane {
+    -fx-background-color: #000000;
+}
+
+/* SplitPanes */
+.split-pane {
+    -fx-background-color: #000000;
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: #202020;
+}
+
+/* Painéis internos */
+.anchor-pane {
+    -fx-background-color: #000000;
+}
+
+/* Todos os textos */
+.text {
+    -fx-fill: white;
+}
+
+/* Separadores */
+.separator .line {
+    -fx-border-color: #404040;
+    -fx-border-width: 1;
+}
+
+/* Retângulo da tela */
+.rectangle {
+    -fx-fill: #1a1a1a;
+    -fx-stroke: #555555;
+}
+
+/* Botões vermelhos */
+.botao-vermelho {
+    -fx-background-color: #d32f2f;
+    -fx-text-fill: white;
+    
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+
+    -fx-cursor: hand;
+
+   
+}
+
+.botao-vermelho:hover {
+    -fx-background-color: #f44336;
+}
+
+.botao-vermelho:pressed {
+    -fx-background-color: #b71c1c;
+}
