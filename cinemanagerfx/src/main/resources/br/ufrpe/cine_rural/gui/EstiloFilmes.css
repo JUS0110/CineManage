@@ -29,3 +29,8 @@
     -fx-font-weight: bold;
     -fx-text-fill: white;
 }
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}

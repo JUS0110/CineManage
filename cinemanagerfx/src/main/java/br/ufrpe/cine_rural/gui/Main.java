@@ -18,6 +18,10 @@ public class Main extends Application {
                 Main.class.getResource("/br/ufrpe/cine_rural/gui/Filmes.fxml")
         );
 
+        FXMLLoader loader3 = new FXMLLoader(
+                Main.class.getResource("/br/ufrpe/cine_rural/gui/EmissaoIngresso.fxml")
+        );
+
         Scene sceneAssentos = new Scene(loader1.load());
         sceneAssentos.getStylesheets().add(
                 Main.class.getResource("/br/ufrpe/cine_rural/gui/EstiloAssentos.css")
@@ -30,17 +34,18 @@ public class Main extends Application {
                         .toExternalForm()
         );
 
+        Scene sceneIngresso = new Scene(loader3.load());
+        sceneIngresso.getStylesheets().add(
+                Main.class.getResource("/br/ufrpe/cine_rural/gui/EstiloIngresso.css")
+                        .toExternalForm()
+        );
+
         Stage stage1 = new Stage();
-        stage1.setTitle("Assentos");
-        stage1.setScene(sceneAssentos);
+        stage1.setTitle("Filmes");
+        stage1.setScene(sceneFilmes);
         stage1.setResizable(false);
 
-        Stage stage2 = new Stage();
-        stage2.setTitle("Filmes");
-        stage2.setScene(sceneFilmes);
-
         stage1.show();
-        stage2.show();
     }
 
     public static void main(String[] args) {

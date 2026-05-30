@@ -38,7 +38,7 @@
 .botao-vermelho {
     -fx-background-color: #d32f2f;
     -fx-text-fill: white;
-    
+
     -fx-font-weight: bold;
 
     -fx-background-radius: 8;
@@ -46,7 +46,7 @@
 
     -fx-cursor: hand;
 
-   
+
 }
 
 .botao-vermelho:hover {

@@ -1,27 +1,27 @@
 package br.ufrpe.cine_rural.gui.controllers_telas;
 
-import br.ufrpe.cine_rural.model.Filme;
-import br.ufrpe.cine_rural.model.Sessao;
+import br.ufrpe.cine_rural.enums.ClassificacaoIndicativa;
+import br.ufrpe.cine_rural.enums.Genero;
 import br.ufrpe.cine_rural.enums.Idioma;
 import br.ufrpe.cine_rural.enums.StatusSessao;
-import br.ufrpe.cine_rural.enums.Genero;
-import br.ufrpe.cine_rural.enums.ClassificacaoIndicativa;
-import br.ufrpe.cine_rural.model.tiposala.Sala;
-
-import br.ufrpe.cine_rural.model.tiposala.Vip;
-import br.ufrpe.cine_rural.model.tiposala.Imax;
+import br.ufrpe.cine_rural.model.Filme;
+import br.ufrpe.cine_rural.model.Sessao;
 import br.ufrpe.cine_rural.model.tiposala.Comum;
-
+import br.ufrpe.cine_rural.model.tiposala.Imax;
+import br.ufrpe.cine_rural.model.tiposala.Vip;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-import java.time.LocalTime;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -32,6 +32,8 @@ public class FilmesController {
 
     @FXML
     private VBox containerFilmes;
+
+    private Sessao sessaoSelecionada = null;
 
     @FXML
     public void initialize() {
@@ -139,8 +141,50 @@ public class FilmesController {
                 horariosContainer.getChildren().add(blocoSessao);
             }
 
-            String horaFormatada = s.getHorario().format(formatter);
-            Button btnHorario = new Button(horaFormatada);
+            Button btnHorario = new Button(s.getHorario().format(formatter));
+
+            btnHorario.setOnAction(event -> {
+                sessaoSelecionada = s;  // ← armazena
+
+                int heranca = switch (s.getSala()) {
+                    case Comum c -> 1;
+                    case Imax i -> 2;
+                    case Vip v -> 3;
+                    default -> 5;
+                };
+
+                try {
+                    FXMLLoader loader = new FXMLLoader(
+                            getClass().getResource("/br/ufrpe/cine_rural/gui/Assentos.fxml")
+                    );
+                    Scene scene = new Scene(loader.load());
+                    scene.getStylesheets().add(
+                            getClass().getResource("/br/ufrpe/cine_rural/gui/EstiloAssentos.css")
+                                    .toExternalForm()
+                    );
+
+                    AssentoController ac = loader.getController();
+                    ac.setDados(
+                            heranca,
+                            s.getSala().getId(),
+                            s.getSala().toString(),
+                            s.getHorario().format(DateTimeFormatter.ofPattern("HH:mm")),
+                            s.getIdioma(),
+                            s.getFilme().getDuracao(),
+                            s.getFilme().getClassificacao(),
+                            s.getFilme().getPoster()
+                    );
+
+                    Stage stageAssentos = (Stage) containerFilmes.getScene().getWindow();
+                    stageAssentos.setTitle("Assentos — " + s.getFilme().getTitulo());
+                    stageAssentos.setScene(scene);
+                    stageAssentos.setResizable(false);
+                    stageAssentos.show();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
 
             salasMap.get(nomeSala).getChildren().add(btnHorario);
         }

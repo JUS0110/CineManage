@@ -2,67 +2,74 @@ package br.ufrpe.cine_rural.gui.models_telas;
 
 public class SalasMapas {
 
-    public static boolean[][] salaComum = {
-            { false, true, true, true, true, true, true, true, true, true, true, false },
+    public static int[][] salaComum = {
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, false, true, true, true, true, true, true, true, true, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
 
-            { false, false, true, true, true, true, true, true, true, true, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
 
-            { false, false, true, true, true, true, true, true, true, true, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
 
-            { false, false, true, true, true, true, true, true, true, true, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
 
-            { false, false, true, true, true, true, true, true, true, true, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0},
 
-            { false, false, true, true, true, true, true, true, true, false, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0},
 
-            { false, false, false, true, true, true, true, true, true, false, false, false },
+            {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0},
 
-            { false, false, false, false, true, true, true, true, false, false, false, false }
+            {0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0}
     };
 
-    public static boolean[][] salaImax = {
-            { false, true, true, true, true, true, true, true, false },
+    public static int[][] salaImax = {
+            {0, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, false, true, true, true, true, true, true, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, false, true, true, true, true, true, true, false },
+            {0, 0, 1, 1, 1, 1, 1, 1, 0},
 
-            { false, false, true, true, true, true, true, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 0, 0},
 
-            { false, false, true, true, true, true, true, false, false },
+            {0, 0, 1, 1, 1, 1, 1, 0, 0},
 
-            { false, false, false, true, true, true, true, false, false }
+            {0, 0, 0, 1, 1, 1, 1, 0, 0}
     };
 
-    public static boolean[][] salaVip = {
+    public static int[][] salaVip = {
+            {0, 1, 1, 1, 1, 0, 0},
 
-            { false, true, true, true, true, false, false },
+            {0, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 1, 0},
 
-            { false, true, true, true, true, true, false },
+            {0, 1, 1, 1, 1, 0, 0},
 
-            { false, true, true, true, true, false, false },
-
-            { false, false, true, true, true, false, false }
+            {0, 0, 1, 1, 1, 0, 0}
     };
+
+    public static int[][] copiar(int[][] original) {
+        int[][] copia = new int[original.length][];
+        for (int i = 0; i < original.length; i++) {
+            copia[i] = original[i].clone();
+        }
+        return copia;
+    }
 
 }
