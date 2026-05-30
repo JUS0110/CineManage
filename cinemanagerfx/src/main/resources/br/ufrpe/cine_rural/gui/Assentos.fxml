@@ -22,11 +22,7 @@
                                 <Font size="24.0" />
                             </font>
                         </Text>
-                        <Text fx:id="textoSessaoInfo"
-                              fill="WHITE" layoutX="7.0" layoutY="37.0"
-                              strokeType="OUTSIDE" strokeWidth="0.0"
-                              text="Cinema Rural -     Sessão X     Data X      Horario X"
-                              wrappingWidth="622.13671875">
+                        <Text fx:id="textoSessaoInfo" fill="WHITE" layoutX="7.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cinema Rural -     Sessão X     Data X      Horario X" wrappingWidth="622.13671875">
                             <font>
                                 <Font size="26.0" />
                             </font>
@@ -66,11 +62,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="205.0">
                     <children>
-                        <Text fx:id="textoContador"
-                              fill="WHITE" layoutX="6.0" layoutY="28.0"
-                              strokeType="OUTSIDE" strokeWidth="0.0"
-                              text="N. de cadeiras selecionadas  x00 Ingressos"
-                              wrappingWidth="193.57421875">
+                        <Text fx:id="textoContador" fill="WHITE" layoutX="6.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N. de cadeiras selecionadas  x00 Ingressos" wrappingWidth="193.57421875">
                             <font>
                                 <Font size="15.0" />
                             </font>
@@ -83,7 +75,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                     <children>
-                        <Button fx:id="btnVoltar"    layoutX="14.0"  layoutY="39.0" mnemonicParsing="false" styleClass="botao-vermelho" text="Voltar" />
+                        <Button fx:id="btnVoltar" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" styleClass="botao-vermelho" text="Voltar" />
                         <Button fx:id="btnIngressos" layoutX="798.0" layoutY="39.0" mnemonicParsing="false" styleClass="botao-vermelho" text="Ingressos" />
                     </children>
                 </AnchorPane>

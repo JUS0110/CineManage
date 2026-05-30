@@ -14,6 +14,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class AssentoController {
@@ -29,6 +31,8 @@ public class AssentoController {
     @FXML
     private Button btnIngressos;
 
+    private List<String> nomeAssentosSelecionados = new ArrayList<>();
+
     // ── campos preenchidos pelo setDados ─────────────────────────
     private int heranca;
     private int numeroSessao;
@@ -38,6 +42,7 @@ public class AssentoController {
     private int duracao;
     private ClassificacaoIndicativa classificacao;
     private Image poster;
+    private String tituloFilme;
 
     private int[][] layoutAtual;
     private int assentosSelecionados = 0;
@@ -50,16 +55,18 @@ public class AssentoController {
                          Idioma idioma,
                          int duracao,
                          ClassificacaoIndicativa classificacao,
-                         Image poster) {
+                         Image poster,
+                         String tituloFilme) {
 
-        this.heranca        = heranca;
-        this.numeroSessao   = numeroSessao;
-        this.nomeSala       = nomeSala;
-        this.dataHorario    = dataHorario;
-        this.idioma         = idioma;
-        this.duracao        = duracao;
-        this.classificacao  = classificacao;
+        this.heranca = heranca;
+        this.numeroSessao  = numeroSessao;
+        this.nomeSala = nomeSala;
+        this.dataHorario = dataHorario;
+        this.idioma = idioma;
+        this.duracao = duracao;
+        this.classificacao = classificacao;
         this.poster = poster;
+        this.tituloFilme = tituloFilme;
 
         switch (heranca) {
             case 1 -> layoutAtual = SalasMapas.copiar(SalasMapas.salaComum);
@@ -67,7 +74,6 @@ public class AssentoController {
             case 3 -> layoutAtual = SalasMapas.copiar(SalasMapas.salaVip);
             default -> layoutAtual = SalasMapas.copiar(SalasMapas.salaComum);
         }
-
 
         textoSessaoInfo.setText(
                 "Cinema Rural — Sessão " + numeroSessao
@@ -92,7 +98,6 @@ public class AssentoController {
         posterView.setLayoutY(65);
         painel.getChildren().add(posterView);
     }
-
 
     private void configurarBotaoVoltar() {
 
@@ -136,9 +141,20 @@ public class AssentoController {
                         getClass().getResource("/br/ufrpe/cine_rural/gui/EstiloIngresso.css")
                                 .toExternalForm()
                 );
+
+                IngressoController ic = loader.getController();
+                ic.setAssentosSelecionados(nomeAssentosSelecionados);
+                ic.setTipoSala(nomeSala);
+
                 Stage stageAtual = (Stage) painel.getScene().getWindow();
                 stageAtual.setTitle("Ingresso");
                 stageAtual.setScene(scene);
+
+                ic.setTituloFilme(tituloFilme);
+                ic.setHorario(dataHorario);
+                ic.setAssentosSelecionados(nomeAssentosSelecionados);
+                ic.setTipoSala(nomeSala);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -172,7 +188,7 @@ public class AssentoController {
 
     @FXML
     public void initialize() {
-        // vazio — tudo é montado em setDados()
+
     }
 
     private void gerarAssentos() {
@@ -196,7 +212,7 @@ public class AssentoController {
         for (int i = 0; i < layoutAtual.length; i++) {
             for (int j = 0; j < layoutAtual[i].length; j++) {
 
-                if (layoutAtual[i][j] == 0) continue;  // célula vazia, ignora
+                if (layoutAtual[i][j] == 0) continue;
 
                 boolean estaOcupado = layoutAtual[i][j] == 2;
 
@@ -214,9 +230,11 @@ public class AssentoController {
                     if (estaSelecionado) {
                         botao.setStyle(verde);
                         assentosSelecionados--;
+                        nomeAssentosSelecionados.remove(botao.getText());
                     } else {
                         botao.setStyle(azul);
                         assentosSelecionados++;
+                        nomeAssentosSelecionados.add(botao.getText());
                     }
 
                     textoContador.setText(

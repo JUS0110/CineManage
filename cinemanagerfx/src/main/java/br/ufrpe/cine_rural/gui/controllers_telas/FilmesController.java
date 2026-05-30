@@ -37,7 +37,7 @@ public class FilmesController {
 
     @FXML
     public void initialize() {
-        // Carregamento de imagens (garanta que estão na mesma pasta do controller no build)
+
         Image poster1 = new Image(getClass().getResourceAsStream("/br/ufrpe/cine_rural/gui/Project_Hail_Mary_poster.jpg"));
         Image poster2 = new Image(getClass().getResourceAsStream("/br/ufrpe/cine_rural/gui/Odisseia.jpg"));
         Image poster3 = new Image(getClass().getResourceAsStream("/br/ufrpe/cine_rural/gui/Zootopia_2.jpg"));
@@ -114,7 +114,6 @@ public class FilmesController {
         Label titulo = new Label(filme.getTitulo());
         titulo.getStyleClass().add("titulo-filme");
 
-        // Convertendo enums e inteiros para String de forma segura
         Label classificacao = new Label("Classificação: " + filme.getClassificacao().toString());
         Label duracao = new Label("Duração: " + filme.getDuracao() + " min");
         Label idioma = new Label("Idioma: " + sessaoBase.getIdioma().toString());
@@ -144,7 +143,7 @@ public class FilmesController {
             Button btnHorario = new Button(s.getHorario().format(formatter));
 
             btnHorario.setOnAction(event -> {
-                sessaoSelecionada = s;  // ← armazena
+                sessaoSelecionada = s;
 
                 int heranca = switch (s.getSala()) {
                     case Comum c -> 1;
@@ -172,7 +171,8 @@ public class FilmesController {
                             s.getIdioma(),
                             s.getFilme().getDuracao(),
                             s.getFilme().getClassificacao(),
-                            s.getFilme().getPoster()
+                            s.getFilme().getPoster(),
+                            s.getFilme().getTitulo()
                     );
 
                     Stage stageAssentos = (Stage) containerFilmes.getScene().getWindow();

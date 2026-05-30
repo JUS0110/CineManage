@@ -71,5 +71,4 @@ public class SalasMapas {
         }
         return copia;
     }
-
 }
