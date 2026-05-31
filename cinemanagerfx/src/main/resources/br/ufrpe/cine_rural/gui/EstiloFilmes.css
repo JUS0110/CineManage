@@ -1,0 +1,36 @@
+.root{
+    -fx-background-color: black;
+}
+
+.scroll-pane{
+    -fx-background: black;
+    -fx-background-color: black;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: black;
+}
+
+.button{
+    -fx-background-color: #e50914;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+}
+
+.titulo-filme{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.sala{
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}

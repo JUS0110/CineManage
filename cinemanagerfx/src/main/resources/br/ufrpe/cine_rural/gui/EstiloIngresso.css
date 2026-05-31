@@ -1,0 +1,86 @@
+/* Fundo principal */
+.root,
+.anchor-pane,
+.vbox {
+    -fx-background-color: #000000;
+}
+
+/* Título */
+.label-titulo {
+    -fx-text-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: normal;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+/* Campos de texto */
+.text-field,
+.text-area,
+.password-field {
+    -fx-background-color: #000000;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #808080;
+
+    -fx-border-color: #5a5a5a;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+}
+
+/* Quando o campo recebe foco */
+.text-field:focused,
+.text-area:focused,
+.password-field:focused {
+    -fx-border-color: #d0d0d0;
+}
+
+/* CheckBox */
+.check-box {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+
+.check-box .box {
+    -fx-background-color: #1f1f1f;
+    -fx-border-color: #8a8a8a;
+    -fx-border-radius: 4px;
+}
+
+/* Container das opções */
+.opcao-box {
+    -fx-background-color: #1f1f1f;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px;
+}
+
+/* Botão principal */
+.button {
+    -fx-background-color: #e6e6e6;
+    -fx-text-fill: #111111;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: normal;
+
+    -fx-background-radius: 25px;
+    -fx-cursor: hand;
+
+    -fx-padding: 12px 25px;
+}
+
+.button:hover {
+    -fx-background-color: #f2f2f2;
+}
+
+/* Texto pequeno do rodapé */
+.label-rodape {
+    -fx-text-fill: #b0b0b0;
+    -fx-font-size: 11px;
+    -fx-alignment: center;
+}

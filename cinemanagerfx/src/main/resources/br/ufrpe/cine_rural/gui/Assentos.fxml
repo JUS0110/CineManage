@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="painel" prefHeight="700.0" prefWidth="900.0" styleClass="root-pane" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrpe.cine_rural.gui.controllers_telas.AssentoController">
+    <children>
+        <SplitPane dividerPositions="0.8492201039861352" layoutX="11.0" layoutY="11.0" orientation="VERTICAL" prefHeight="579.0" prefWidth="668.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="436.0" prefWidth="656.0">
+                    <children>
+                        <Separator layoutX="-4.0" layoutY="48.0" prefHeight="15.0" prefWidth="674.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="38.0" layoutX="88.0" layoutY="444.0" stroke="BLACK" strokeType="INSIDE" width="480.0" />
+                        <Text layoutX="275.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tela" textAlignment="CENTER" wrappingWidth="115.57421875">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="textoSessaoInfo" fill="WHITE" layoutX="7.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cinema Rural -     Sessão X     Data X      Horario X" wrappingWidth="622.13671875">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="64.0" prefWidth="647.0">
+                    <children>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Legenda" wrappingWidth="87.13671875">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Text>
+                        <Ellipse fill="#00c853" layoutX="22.0" layoutY="56.0" radiusX="8.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fill="WHITE" layoutX="34.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livre" wrappingWidth="66.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Ellipse fill="#fc4949" layoutX="84.0" layoutY="56.0" radiusX="8.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fill="WHITE" layoutX="96.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocupado" wrappingWidth="66.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Ellipse fill="#2962ff" layoutX="170.0" layoutY="56.0" radiusX="8.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Text fill="WHITE" layoutX="181.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecionado" wrappingWidth="76.0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+        <SplitPane dividerPositions="0.8596187175043327" layoutX="687.0" layoutY="10.0" orientation="VERTICAL" prefHeight="627.0" prefWidth="207.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="205.0">
+                    <children>
+                        <Text fx:id="textoContador" fill="WHITE" layoutX="6.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N. de cadeiras selecionadas  x00 Ingressos" wrappingWidth="193.57421875">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Text>
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+        <SplitPane dividerPositions="0.027522935779816515" layoutX="14.0" layoutY="639.0" orientation="VERTICAL" prefHeight="111.0" prefWidth="880.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <children>
+                        <Button fx:id="btnVoltar" layoutX="14.0" layoutY="39.0" mnemonicParsing="false" styleClass="botao-vermelho" text="Voltar" />
+                        <Button fx:id="btnIngressos" layoutX="798.0" layoutY="39.0" mnemonicParsing="false" styleClass="botao-vermelho" text="Ingressos" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

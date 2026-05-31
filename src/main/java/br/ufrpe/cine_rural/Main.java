@@ -314,8 +314,6 @@ public class Main {
             25.0,
             CategoriaMeiaEntrada.ESTUDANTE
     );
-        cController.cadastrarCliente("Arthur", "121", 23, "neve.com");
-        cController.atualizarCliente(cController.buscarPorCpf("121"), "Paulo", 21, "Paulo.com");
-        System.out.println(cController.listarClientes());
+
 
 }

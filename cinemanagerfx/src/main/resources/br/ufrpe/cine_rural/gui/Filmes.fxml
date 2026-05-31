@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.ufrpe.cine_rural.gui.controllers_telas.FilmesController"
+            prefWidth="900.0"
+            prefHeight="700.0">
+
+   <VBox fx:id="containerFilmes"
+         spacing="20"
+         prefWidth="900.0"
+         prefHeight="700.0"
+         AnchorPane.topAnchor="0.0"
+         AnchorPane.bottomAnchor="0.0"
+         AnchorPane.leftAnchor="0.0"
+         AnchorPane.rightAnchor="0.0"/>
+</AnchorPane>
