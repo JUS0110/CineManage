@@ -38,6 +38,7 @@ build/
 ### Mac OS ###
 .DS_Store
 
+.mvn
 .mvn/wrapper
-mvnw
-mvnw.cmd
+.mvnw
+.mvnw.cmd
