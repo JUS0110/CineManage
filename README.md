@@ -16,7 +16,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [x] Entrega 1: Classes básicas (models) implementadas.
 - [x] Entrega 2: Implementação inicial com funcionalidades prontas.
-- [ ] Entrega 3: Protótipo funcional com GUI.
+- [x] Entrega 3: Protótipo funcional com GUI.
 - [ ] Entrega Final: Apresentação de Projetos.
 
 
