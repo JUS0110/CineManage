@@ -16,6 +16,7 @@ public class IngressoController {
     private List<String> assentosSelecionados;
     private String tipoSala;
 
+    // Informações do AssentoController para contabilizar tudo no Alert final
     public void setTituloFilme(String tituloFilme) {
         this.tituloFilme = tituloFilme;
     }
@@ -29,9 +30,11 @@ public class IngressoController {
         this.tipoSala = tipoSala;
     }
 
+    // Metodo para chamar o Alert e organização/atribuição das informações no Alert
     @FXML
     private void btnEmissaoIngressoImprimir() {
 
+        // Verificador de assentos selecionados, caso não selecionado
         if (assentosSelecionados == null || assentosSelecionados.isEmpty()) {
             Alert erro = new Alert(Alert.AlertType.WARNING);
             erro.setTitle("Atenção");
@@ -45,9 +48,10 @@ public class IngressoController {
 
         String listaAssentos = String.join(", ", assentosSelecionados);
 
+        // Strings que vão ser retornadas no Alerts com verificadores simples
         String linhaQuantidade;
         if (qtdIngressos == 1) {
-            linhaQuantidade = "Quantidade de ingressos: 1 ingresso";
+            linhaQuantidade = "Quantidade de ingressos: 1 ingresso"; // organização de pluralidade caso seja apenas 1 ingresso, fiquei devendo na tela Assento
         } else {
             linhaQuantidade = "Quantidade de ingressos: " + qtdIngressos + " ingressos";
         }
@@ -80,6 +84,7 @@ public class IngressoController {
             textoSala = "—";
         }
 
+        // String do print dentro do alert chamando as variaveis devidamente
         String conteudo = String.format(
                 """
                 Filme: %s
@@ -95,6 +100,7 @@ public class IngressoController {
                 linhaQuantidade
         );
 
+        // Criação de Alerta com notifição de emissão e resumo dos ingressos
         Alert alert = new Alert(Alert.AlertType.INFORMATION, conteudo, ButtonType.OK);
         alert.setTitle("Emissão de Ingresso");
         alert.setHeaderText("Resumo do(s) Ingresso(s)");

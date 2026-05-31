@@ -20,20 +20,15 @@ import java.util.Random;
 
 public class AssentoController {
 
-    @FXML
-    private AnchorPane painel;
-    @FXML
-    private Text textoSessaoInfo;
-    @FXML
-    private Text textoContador;
-    @FXML
-    private Button btnVoltar;
-    @FXML
-    private Button btnIngressos;
+    @FXML private AnchorPane painel;
+    @FXML private Text textoSessaoInfo;
+    @FXML private Text textoContador;
+    @FXML private Button btnVoltar;
+    @FXML private Button btnIngressos;
 
     private List<String> nomeAssentosSelecionados = new ArrayList<>();
 
-    // ── campos preenchidos pelo setDados ─────────────────────────
+    // Variavéis para o setDados
     private int heranca;
     private int numeroSessao;
     private String nomeSala;
@@ -44,10 +39,11 @@ public class AssentoController {
     private Image poster;
     private String tituloFilme;
 
+    // Matriz dos Mapas e variavel de seleção de assentos
     private int[][] layoutAtual;
     private int assentosSelecionados = 0;
 
-    // ── chamado pelo FilmesController após load() ─────────────────
+    // Metodo chamado pelo FilmesController após load()
     public void setDados(int heranca,
                          int numeroSessao,
                          String nomeSala,
@@ -68,6 +64,8 @@ public class AssentoController {
         this.poster = poster;
         this.tituloFilme = tituloFilme;
 
+
+        // Switch case dos layouts dos mapas
         switch (heranca) {
             case 1 -> layoutAtual = SalasMapas.copiar(SalasMapas.salaComum);
             case 2 -> layoutAtual = SalasMapas.copiar(SalasMapas.salaImax);
@@ -75,14 +73,21 @@ public class AssentoController {
             default -> layoutAtual = SalasMapas.copiar(SalasMapas.salaComum);
         }
 
+        // Textos da tela Assento com concatenação de dados variavéis vindos do FilmesController
         textoSessaoInfo.setText(
                 "Cinema Rural — Sessão " + numeroSessao
                         + " | " + nomeSala
                         + " | " + dataHorario
         );
 
+        /*
+           Texto base da seleção de cadeiras (Retirei do fxml para os controlladores)
+           Objetivo : Pegar os dados dos cliques do usuario de um metodo/algoritmos e
+           incrementar ou decrementar x00 Ingressos"
+        */
         textoContador.setText("N. de cadeiras selecionadas  x00 Ingressos");
 
+        // Chamando Métodos
         ocuparAssentosAleatorios();
         gerarAssentos();
         exibirPoster();
@@ -90,6 +95,7 @@ public class AssentoController {
         configurarBotaoIngressos();
     }
 
+    // Exibição do Poster do filme selecionado da tela Filmes para tela Assentos
     private void exibirPoster() {
         ImageView posterView = new ImageView(poster);
         posterView.setFitWidth(210);
@@ -99,6 +105,7 @@ public class AssentoController {
         painel.getChildren().add(posterView);
     }
 
+    // Utilização do platform para retornar da tela Assentos para Filmes, tive que editar algumas coisas no fxml
     private void configurarBotaoVoltar() {
 
         Platform.runLater(() -> {
@@ -130,6 +137,7 @@ public class AssentoController {
         });
     }
 
+    // Utilização do platform para prosseguir da tela Assentos até a tela Ingressos, tive que editar algumas coisas no fxml também
     private void configurarBotaoIngressos() {
         btnIngressos.setOnAction(event -> {
             try {
@@ -162,6 +170,12 @@ public class AssentoController {
     }
 
 
+    /*
+     Metodo para gerar aleatoriamente Assentos ocupados, tive que mudar certas coisas do SalaMapas
+     Antes o mapeamento era de true ou false e mudei para 0, 1 e 2
+     Já que são 3 tipos de cadeiras boolean não fez muito sentido da minha parte
+     */
+
     private void ocuparAssentosAleatorios() {
         Random random = new Random();
         int totalAssentos = 0;
@@ -191,10 +205,16 @@ public class AssentoController {
 
     }
 
+    /*
+    Metodo para Gerar, pintar e organizar nomes dos assentos, também
+    receber informações pelo event executado pelo usuario, com verificador de assento ocupado
+    e incremento e decremento da variavel de seleção no text da tela Assento
+     */
     private void gerarAssentos() {
 
         int tamanho = layoutAtual.length;
 
+        // Um caos enorme conseguir acertar a posição correta da matriz na tela, pelo menos não tive que usar gridpane
         double areaX = 40 ;
         double areaY = 90;
         double areaLargura = 620;
@@ -220,7 +240,12 @@ public class AssentoController {
                 botao.setPrefSize(larguraBotao, alturaBotao);
                 botao.setLayoutX(areaX + j * (larguraBotao + espacamento));
                 botao.setLayoutY(areaY + i * (alturaBotao  + espacamento));
-                botao.setStyle(estaOcupado ? vermelho : verde);
+
+                if (estaOcupado) {
+                    botao.setStyle(vermelho);
+                } else {
+                    botao.setStyle(verde);
+                }
 
                 botao.setOnAction(event -> {
                     if (estaOcupado) return;

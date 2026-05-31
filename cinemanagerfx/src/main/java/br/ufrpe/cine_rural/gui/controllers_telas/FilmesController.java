@@ -38,10 +38,12 @@ public class FilmesController {
     @FXML
     public void initialize() {
 
+        // Imagens dos Posters da Tela Filmes tirados do resource (o que isso gerou de incompatibilidade foi brincadeira)
         Image poster1 = new Image(getClass().getResourceAsStream("/br/ufrpe/cine_rural/gui/Project_Hail_Mary_poster.jpg"));
         Image poster2 = new Image(getClass().getResourceAsStream("/br/ufrpe/cine_rural/gui/Odisseia.jpg"));
         Image poster3 = new Image(getClass().getResourceAsStream("/br/ufrpe/cine_rural/gui/Zootopia_2.jpg"));
 
+        // Criando Filmes
         Filme devoradores = new Filme(
                 "Devoradores de Estrelas",
                 "Sinopse...",
@@ -72,6 +74,7 @@ public class FilmesController {
                 poster3
         );
 
+        // Listando Sessões
         List<Sessao> sessoes = List.of(
                 new Sessao(Idioma.DUBLADO, StatusSessao.ABERTA, LocalDateTime.of(2026, 5, 30, 14, 30), devoradores, new Vip(1, 20)),
                 new Sessao(Idioma.LEGENDADO, StatusSessao.ABERTA, LocalDateTime.of(2026, 5, 30, 18, 0), odisseia, new Imax(2,40)),
@@ -95,6 +98,8 @@ public class FilmesController {
         }
     }
 
+
+    // Organizando e criando fxml diretamente pelo código pelo metodo criarCard
     private void criarCard(List<Sessao> grupo) {
         if (grupo == null || grupo.isEmpty()) return;
 
